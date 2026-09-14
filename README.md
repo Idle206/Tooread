@@ -9,7 +9,7 @@ The UI and overall concept were heavily inspired by existing web novel platforms
 
 ### 🛠️ Technology
 
-* **Frontend:** Web technologies
+* **Frontend:** HTML5, Bootstrap 5 and CSS (The only part not made with AI)
 * **Backend:** Mostly AI-generated, because apparently humans have deadlines.
 * **Design:** Inspired by existing platforms because "original design" was not exactly the main objective of this project.
 * **Database:** Exists because a web application apparently needs one.
