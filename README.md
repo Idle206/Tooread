@@ -3,6 +3,9 @@
 **Tooread** is a web-based platform for reading light novels, created as a university project with the ambitious goal of... basically getting the assignment submitted on time.
 
 The UI and overall concept were heavily inspired by existing web novel platforms, particularly **Webtoon**. Because reinventing the wheel seemed unnecessarily difficult, we decided to observe an existing wheel and make our own slightly questionable version of it.
+<p align="center">
+  <img src="./images/homepage.png" width="800">
+</p>
 
 ### 🛠️ Technology
 
