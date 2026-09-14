@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TooRead - Read Light Novel Online</title>
+    <link rel="stylesheet" href="bootstrap-5.2.1-dist/bootstrap-5.2.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        /* CSS bổ sung để tạo bố cục và dải màu đỏ bên phải giống TooRead */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* Đè font-size và khoảng cách cho tiêu đề Contact giống ảnh */
+        .main-title {
+            font-size: 3.4rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+            color: #000;
+        }
+
+        .contact-link {
+            color: #000;
+            text-decoration: underline;
+            font-weight: 400;
+        }
+
+        .content-text {
+            color: #222;
+            font-weight: 400;
+        }
+
+        /* Khối layout chia vùng nội dung và vùng màu trang trí bên phải */
+        .page-wrapper {
+            display: flex;
+            min-height: 70vh;
+            position: relative;
+        }
+
+        .content-area {
+            flex: 1;
+            max-width: 850px;
+            padding-right: 40px;
+        }
+
+        /* Vùng màu đỏ trang trí bên phải giống trong ảnh */
+        .right-decor-banner {
+    width: 140px; /* Tăng nhẹ độ rộng để góc vát đẹp hơn */
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    
+    /* Tạo hiệu ứng đứt đoạn bằng linear-gradient (Khối trên chiếm 38%, khoảng trống 2%, khối dưới chiếm 60%) */
+    background: linear-gradient(
+        to bottom,
+        #dc3545 0%,
+        #dc3545 38%,
+        transparent 38%,
+        transparent 40%,
+        #dc3545 40%,
+        #dc3545 100%
+    );
+
+    /* Cắt vát chéo góc bên trái: phần trên thụt vào (x:45%), phần dưới thụt vào nhiều hơn (x:15%) */
+    clip-path: polygon(45% 0%, 100% 0%, 100% 100%, 15% 100%);
+}
+
+/* Điều chỉnh lại nút "Recently viewed" để bám dọc theo đường vát chéo */
+.recently-viewed-btn {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #d1d1d1;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    
+    /* Xoay dọc nút */
+    transform: rotate(90deg);
+    transform-origin: right bottom;
+    
+    position: absolute;
+    right: 95px; /* Ghim sát cạnh của khối đỏ phía dưới */
+    top: 380px;  /* Đẩy nút xuống nằm ngay mép đầu của khối đỏ phía dưới */
+    
+    border-radius: 6px 6px 0 0;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.05);
+    z-index: 11;
+    cursor: pointer;
+}
+
+/* Thêm icon mũi tên hướng xuống nhỏ cho nút */
+.recently-viewed-btn::after {
+    content: " chevron_down";
+    font-family: "bootstrap-icons";
+    font-size: 11px;
+    margin-left: 8px;
+    display: inline-block;
+    transform: rotate(-90deg); /* Xoay lại icon do nút đã bị xoay */
+} 
+    </style>
+</head>
+
+<body>
+
+    <header class="container d-flex justify-content-between align-items-center py-3 fs-5">
+        <div class="d-flex align-items-center gap-5">
+            <a href="index.html">
+                <img src="logo.webp" alt="Logo TooRead" width="110">
+            </a>
+            <nav>
+                <ul class="d-flex gap-4 list-unstyled m-0">
+                    <li><a href="#" class="nav-link fw-semibold p-0">About us</a></li>
+                    <li><a href="#" class="nav-link fw-semibold p-0">Work with us</a></li>
+                    <li><a href="#" class="nav-link fw-semibold p-0">News</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div>
+            <nav>
+                <ul class="d-flex gap-4 list-unstyled m-0 align-items-center">
+                    <li><a href="#" class="nav-link fw-semibold p-0">ORIGINAL</a></li>
+                    <li><a href="#" class="nav-link fw-semibold p-0">TRANSLATED</a></li>
+                    <li><a href="#" class="nav-link fw-semibold p-0">CATEGORIES</a></li>
+                    <li>
+                        <button class="btn btn-outline-danger rounded-pill" data-bs-toggle="modal" data-bs-target="#authModal">
+                            Log In
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn btn-light rounded-circle d-flex align-items-center justify-content-center" style="width: 44px; height: 44px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50" fill="currentColor">
+                                <path d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z"></path>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <hr class="m-0 text-muted opacity-25">
+
+    <div class="page-wrapper container-fluid p-0">
+        
+        <div class="container py-5 px-4 content-area">
+            
+            <h1 class="main-title mb-5">Contact</h1>
+
+            <div class="mb-5">
+                <h5 class="fw-bold mb-3">Contact E-Mail</h5>
+                
+                <p class="mb-2">
+                    <a href="mailto:TooReadsupport@TooRead.com" class="contact-link">TooReadsupport@TooRead.com</a> 
+                    <span class="content-text">for product help, questions, or feedback.</span>
+                </p>
+                
+                <p class="mb-2">
+                    <a href="mailto:TooReadip@TooRead.com" class="contact-link">TooReadip@TooRead.com</a> 
+                    <span class="content-text">for IP business, rights, and licensing inquiries.</span>
+                </p>
+                
+                <p class="mb-2">
+                    <a href="mailto:dl_lineTooRead_ad@TooReadscorp.com" class="contact-link">dl_lineTooRead_ad@TooReadscorp.com</a> 
+                    <span class="content-text">for advertising and partnership opportunities.</span>
+                </p>
+                
+                <p class="mb-2">
+                    <a href="mailto:TooReadpress@TooRead.com" class="contact-link">TooReadpress@TooRead.com</a> 
+                    <span class="content-text">for press/media inquiries.</span>
+                </p>
+            </div>
+
+            <div class="my-5"></div>
+
+            <div class="mb-5">
+                <h5 class="fw-bold mb-3">Meet TooRead™.</h5>
+                <p class="content-text mb-2">We started a whole new way to create stories and opened it up to anyone with a story to tell.</p>
+                <p class="content-text mb-2">We're home to thousands of creator-owned content with amazing, diverse visions from all over the world.</p>
+                <p class="content-text mb-2">Get in on the latest original romance, comedy, action, fantasy, horror, and more from big names and</p>
+                <p class="content-text mb-2">big names to be - made just for TooRead.</p>
+                <p class="content-text mb-2">We're available anywhere, anytime, and always for free.</p>
+            </div>
+        </div>
+
+
+        <div class="right-decor-banner"></div>
+    </div>
+
+
+ <!--Phần footer-->
+  <footer class="bg-light text-center py-5 border-top">
+    <div class="container">
+      <div class="d-flex justify-content-center gap-4 mb-4 text-dark fs-4">
+        <a href="https://www.facebook.com/profile.php?id=61590154946234" target="_blank" rel="noopener noreferrer"
+          class="text-dark text-decoration-none"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-dark text-decoration-none"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-dark text-decoration-none"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.youtube.com/channel/UCUM9mIBItZbT-6kkptJIomQ" target="_blank" rel="noopener noreferrer"
+          class="text-dark text-decoration-none">
+          <i class="bi bi-youtube"></i>
+        </a>
+      </div>
+
+      <div class="d-flex flex-wrap justify-content-center align-items-center gap-3 mb-5 small-footer-links">
+        <a href="aboutus.html" class="text-secondary text-decoration-none">About</a>
+        <span class="text-muted divider">|</span>
+        <a href="#" class="text-secondary text-decoration-none">Feedback</a>
+        <span class="text-muted divider">|</span>
+        <a href="#" class="text-secondary text-decoration-none">Help</a>
+        <span class="text-muted divider">|</span>
+        <a href="terms.html" class="text-secondary text-decoration-none">Terms</a>
+        <span class="text-muted divider">|</span>
+        <a href="privacy.html" class="text-secondary text-decoration-none">Privacy</a>
+        <span class="text-muted divider">|</span>
+        <a href="#" class="text-secondary text-decoration-none">Advertise</a>
+        <span class="text-muted divider">|</span>
+        <a href="contact.html" class="text-secondary text-decoration-none">Contact</a>
+
+        <div class="ms-2">
+          <select class="form-select form-select-sm language-dropdown">
+            <option value="en" selected>English</option>
+            <option value="vi">Tiếng Việt</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="footer-brand-section">
+        <div class="mb-2">
+          <img src="logo2.webp" alt="TooRead Logo" class="TooRead-style-logo" style="height: 30px; width: auto" />
+        </div>
+        <p class="text-muted mb-0 copyright-text">ⓒ TooRead Ltd.</p>
+      </div>
+    </div>
+  </footer>
+  
+
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 400px;">
+            <div class="modal-content border-0 shadow-lg" style="border-radius: 16px; overflow: hidden;">
+                <div class="modal-header border-0 pb-0 justify-content-end">
+                    <button type="button" class="btn-close m-2" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body px-4 pb-4 pt-0">
+                    <div class="text-center mb-4">
+                        <img src="logo2.webp" alt="TooRead Logo" style="height: 28px; width: auto; object-fit: contain;">
+                    </div>
+
+                    <div id="loginSection">
+                        <div class="text-center mb-4">
+                            <h4 class="fw-bold text-dark mb-1">Log in to TooRead</h4>
+                            <p class="text-secondary small">Nhập tài khoản để tiếp tục đọc truyện</p>
+                        </div>
+
+                        <form id="modalLoginForm">
+                            <div class="mb-3">
+                                <label class="form-label small fw-semibold text-secondary">Email address</label>
+                                <input type="email" id="modalLoginEmail" class="form-control rounded-3 py-2" placeholder="name@example.com" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label small fw-semibold text-secondary">Password</label>
+                                <input type="password" id="modalLoginPassword" class="form-control rounded-3 py-2" placeholder="••••••••" required>
+                            </div>
+                            <button type="submit" class="btn btn-dark w-100 rounded-pill py-2 fw-semibold mb-3 btn-auth-action">Sign In</button>
+                        </form>
+
+                        <div class="text-center mt-2">
+                            <p class="small text-secondary mb-0">Chưa có tài khoản? <a href="#" id="linkToRegister" class="text-danger text-decoration-none fw-bold">Đăng ký ngay</a></p>
+                        </div>
+                    </div>
+
+                    <div id="registerSection" class="d-none">
+                        <div class="text-center mb-4">
+                            <h4 class="fw-bold text-dark mb-1">Create Account</h4>
+                            <p class="text-secondary small">Đăng ký tài khoản TooRead miễn phí</p>
+                        </div>
+
+                        <form id="modalRegisterForm">
+                            <div class="mb-3">
+                                <label class="form-label small fw-semibold text-secondary">Username</label>
+                                <input type="text" id="modalRegName" class="form-control rounded-3 py-2" placeholder="Nguyễn Văn A" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-semibold text-secondary">Email address</label>
+                                <input type="email" id="modalRegEmail" class="form-control rounded-3 py-2" placeholder="name@example.com" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label small fw-semibold text-secondary">Password</label>
+                                <input type="password" id="modalRegPassword" class="form-control rounded-3 py-2" placeholder="Tối thiểu 6 ký tự" minlength="6" required>
+                            </div>
+                            <button type="submit" class="btn btn-dark w-100 rounded-pill py-2 fw-semibold mb-3 btn-auth-action">Sign Up</button>
+                        </form>
+
+                        <div class="text-center mt-2">
+                            <p class="small text-secondary mb-0">Đã có tài khoản? <a href="#" id="linkToLogin" class="text-danger text-decoration-none fw-bold">Đăng nhập</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="bootstrap-5.2.1-dist/bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="auth.js?v=persist-login-all-20260603"></script>
+</body>
+</html>

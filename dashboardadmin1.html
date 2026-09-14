@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASHBOARD</title>
+    <link rel="stylesheet" href="bootstrap-5.2.1-dist/bootstrap-5.2.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header class="navbar navbar-expand bg-white border-bottom align-items-center w-100 px-5" style="height: 70px;">
+        <div class="container-fluid d-flex align-items-center justify-content-between p-0">
+
+            <div class="d-flex align-items-center gap-2">
+                <a href="index.html" class="d-flex align-items-center gap-3">
+                    <img src="logo3.webp" alt="Logo TooRead" width="110">
+                </a>
+
+                <div class="border-start bg-body-secondary" style="height: 28px; width: 1px;"></div>
+
+                <span class="fs-4 fw-extrabold text-dark text-uppercase tracking-tight"
+                    style="font-family: system-ui, -apple-system, sans-serif;">
+                    Dashboard
+                </span>
+            </div>
+
+            <div class="d-flex align-items-center">
+                <span 
+                    class="bg-body-secondary text-dark rounded-pill px-4 py-2 fw-bold small border text-nowrap">
+                    Admin
+                </span>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="container-fluid bg-light min-vh-100 p-0 d-flex justify-content-center">
+
+        <div class="row g-0 w-100 px-3 px-md-4" style="max-width: 1250px; min-height: calc(100vh - 70px);">
+
+            <div class="col-12 col-md-3 bg-light p-3 d-flex flex-column align-items-center align-items-md-start"
+                style="max-width: 200px;">
+
+                <div class="d-flex flex-column align-items-center w-100 mb-3 pt-2">
+
+                    <div class="bg-secondary bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center mb-2"
+                        style="width: 55px; height: 55px;">
+
+                        <img src="user.png" alt="Avatar" class="img-fluid rounded-circle" style="max-height: 80%;">
+
+                    </div>
+
+                    <div class="text-muted small fw-semibold" style="font-size: 0.8rem;">
+                        Admin
+                    </div>
+                </div>
+
+                <!-- BUTTON -->
+                <button id="createSeriesBtn" class="btn btn-danger w-100 fw-bold py-2 mb-3 text-white">
+                    Create Series
+                </button>
+
+                <!-- MENU -->
+                <ul class="nav flex-column w-100 gap-1 ps-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-bold d-flex align-items-center gap-2 ps-1 py-1.5" href="#"
+                            style="font-size: 0.85rem;">
+
+                            <img src="series.png" alt="Series Icon"
+                                style="width: 1rem; height: 1rem; object-fit: contain;">
+
+                            Series
+
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center gap-2 ps-1 py-1.5" href="dashboard.html"
+                            style="font-size: 0.85rem;">
+
+                            <img src="key.png" alt="Analytics Icon"
+                                style="width: 1rem; height: 1rem; object-fit: contain;">
+
+                            Acc Settings
+
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center gap-2 ps-1 py-1.5" href="#"
+                            style="font-size: 0.85rem;">
+
+                            <img src="comment.png" alt="Comment Icon"
+                                style="width: 1rem; height: 1rem; object-fit: contain;">
+                            Comments
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center gap-2 ps-1 py-1.5" href="#"
+                            style="font-size: 0.85rem;">
+
+                            <img src="like.png" alt="Like Icon" style="width: 1rem; height: 1rem; object-fit: contain;">
+
+                            Super Like
+
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center gap-2 ps-1 py-1.5" href="#"
+                            style="font-size: 0.85rem;">
+
+                            <img src="ad-sharing.png" alt="Ad Sharing Icon"
+                                style="width: 1rem; height: 1rem; object-fit: contain;">
+                            Ad Sharing
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center gap-2 ps-1 py-1.5" href="#"
+                            style="font-size: 0.85rem;">
+
+                            <img src="lab.png" alt="Lab Icon" style="width: 1rem; height: 1rem; object-fit: contain;">
+                            Lab
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center gap-2 ps-1 py-1.5" href="#"
+                            style="font-size: 0.85rem;">
+
+                            <img src="notice.png" alt="Notice Icon"
+                                style="width: 1rem; height: 1rem; object-fit: contain;">
+                            Notice
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- CONTENT -->
+            <div class="col-12 col-md-9 p-3 flex-grow-1" id="contentArea">
+
+
+                <div id="novelTableSection" class="card border-0 shadow-sm rounded-3" style="min-height: 450px;">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0">
+                            <thead class="table-light text-secondary small fw-bold">
+                                <tr>
+                                    <th class="ps-3" style="width: 80px;">COVER</th>
+                                    <th>SERIES TITLE & ID</th>
+                            <th>AUTHOR</th>
+                            <th>GENRE</th>
+                            <th>CHAPTERS</th>
+                            <th class="text-end pe-3">ACTIONS</th>
+                                </tr>
+                            </thead>
+                            <tbody id="novelTableBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- FORM SECTION -->
+             <!-- FORM SECTION -->
+<div id="createFormSection" class="d-none">
+
+    <div class="container bg-white p-4 shadow-sm rounded" style="max-width: 800px;">
+
+        <form id="addStoryForm">
+
+            <!-- COVER IMAGE (URL or PATH) -->
+            <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">
+                    Cover Image
+                </label>
+
+                <div class="col-sm-9">
+                    <input type="text"
+                           id="formCover"
+                           class="form-control"
+                           placeholder="Image URL or path (e.g. images/a.jpg)"
+                           required>
+
+                    <div class="form-text">
+                        JSON Server không upload file, chỉ dùng URL hoặc path
+                    </div>
+                </div>
+            </div>
+
+            <!-- TITLE -->
+            <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">
+                    Title
+                </label>
+
+                <div class="col-sm-9">
+                    <input type="text"
+                           id="formTitle"
+                           class="form-control"
+                           required>
+                </div>
+            </div>
+
+            <!-- AUTHOR -->
+            <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">
+                    Author
+                </label>
+
+                <div class="col-sm-9">
+                    <input type="text"
+                           id="formAuthor"
+                           class="form-control"
+                           required>
+                </div>
+            </div>
+
+            <!-- GENRE -->
+            <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">
+                    Genre
+                </label>
+
+                <div class="col-sm-9">
+                    <input type="text"
+                           id="formGenre"
+                           class="form-control"
+                           placeholder="Romance, Fantasy, Action..."
+                           required>
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">
+                    Schedule
+                </label>
+
+                <div class="col-sm-9">
+                    <input type="text"
+                           id="formSchedule"
+                           class="form-control"
+                           placeholder="Every Tuesday, Weekly, Updating...">
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">
+                    Description
+                </label>
+
+                <div class="col-sm-9">
+                    <textarea id="formDescription"
+                              class="form-control"
+                              rows="5"
+                              placeholder="Story description"></textarea>
+                </div>
+            </div>
+
+            <!-- SUBMIT -->
+            <div class="row">
+                <div class="col-sm-9 offset-sm-3">
+                    <button type="submit" class="btn btn-primary px-4">
+                        Create
+                    </button>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<div id="chapterFormSection" class="d-none">
+
+    <div class="container bg-white p-4 shadow-sm rounded" style="max-width: 800px;">
+
+        <form id="addChapterForm">
+
+            <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">
+                    Series
+                </label>
+
+                <div class="col-sm-9">
+                    <select id="chapterStoryId" class="form-select" required></select>
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">
+                    Volume
+                </label>
+
+                <div class="col-sm-9">
+                    <input type="text"
+                           id="chapterVolumeTitle"
+                           class="form-control"
+                           placeholder="Tap 1, Volume 1..."
+                           required>
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">
+                    Chapter title
+                </label>
+
+                <div class="col-sm-9">
+                    <input type="text"
+                           id="chapterTitle"
+                           class="form-control"
+                           placeholder="Chapter 1"
+                           required>
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">
+                    Chapter number
+                </label>
+
+                <div class="col-sm-9">
+                    <input type="number"
+                           id="chapterNumber"
+                           class="form-control"
+                           min="1"
+                           value="1"
+                           required>
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">
+                    Release date
+                </label>
+
+                <div class="col-sm-9">
+                    <input type="date"
+                           id="chapterReleaseDate"
+                           class="form-control">
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">
+                    Content
+                </label>
+
+                <div class="col-sm-9">
+                    <textarea id="chapterContent"
+                              class="form-control"
+                              rows="10"
+                              placeholder="Paste chapter content here"
+                              required></textarea>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-9 offset-sm-3 d-flex gap-2">
+                    <button type="submit" class="btn btn-primary px-4">
+                        Add chapter
+                    </button>
+                    <button type="button" id="backToSeriesBtn" class="btn btn-outline-secondary px-4">
+                        Back
+                    </button>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+                </div>
+
+
+                <!--footer-->
+                <footer class="bg-light text-center py-5 border-top">
+                    <div class="container">
+
+                        <div class="d-flex justify-content-center gap-4 mb-4 text-dark fs-4">
+                            <a href="https://www.facebook.com/profile.php?id=61590154946234" target="_blank"
+                                rel="noopener noreferrer" class="text-dark text-decoration-none"><i
+                                    class="bi bi-facebook"></i></a>
+                            <a href="#" class="text-dark text-decoration-none"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="text-dark text-decoration-none"><i class="bi bi-twitter-x"></i></a>
+                            <a href="https://www.youtube.com/channel/UCUM9mIBItZbT-6kkptJIomQ" target="_blank"
+                                rel="noopener noreferrer" class="text-dark text-decoration-none">
+                                <i class="bi bi-youtube"></i>
+                            </a>
+                        </div>
+
+                        <div
+                            class="d-flex flex-wrap justify-content-center align-items-center gap-3 mb-5 small-footer-links">
+                            <a href="#" class="text-secondary text-decoration-none">About</a>
+                            <span class="text-muted divider">|</span>
+                            <a href="#" class="text-secondary text-decoration-none">Feedback</a>
+                            <span class="text-muted divider">|</span>
+                            <a href="#" class="text-secondary text-decoration-none">Help</a>
+                            <span class="text-muted divider">|</span>
+                            <a href="#" class="text-secondary text-decoration-none">Terms</a>
+                            <span class="text-muted divider">|</span>
+                            <a href="#" class="text-secondary text-decoration-none">Privacy</a>
+                            <span class="text-muted divider">|</span>
+                            <a href="#" class="text-secondary text-decoration-none">Advertise</a>
+                            <span class="text-muted divider">|</span>
+                            <a href="#" class="text-secondary text-decoration-none">Contact</a>
+
+                            <div class="ms-2">
+                                <select class="form-select form-select-sm language-dropdown">
+                                    <option value="en" selected>English</option>
+                                    <option value="vi">Tiếng Việt</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="footer-brand-section">
+                            <div class="mb-2">
+                                <img src="logo2.webp" alt="TooRead Logo" class="webtoon-style-logo"
+                                    style="height: 30px; width: auto;">
+                            </div>
+                            <p class="text-muted mb-0 copyright-text">ⓒ TooRead Ltd.</p>
+                        </div>
+
+                    </div>
+                </footer>
+
+
+                <script src="auth.js?v=persist-login-all-20260603"></script>
+                <script src="dashboard.js"></script>
+</body>
+
+</html>

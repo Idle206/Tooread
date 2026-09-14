@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User - TooRead</title>
+    <link rel="stylesheet" href="bootstrap-5.2.1-dist/bootstrap-5.2.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header class="navbar navbar-expand bg-white border-bottom align-items-center w-100 px-5" style="height: 70px;">
+        <div class="container-fluid d-flex align-items-center justify-content-between p-0">
+            <div class="d-flex align-items-center gap-2">
+                <a href="index.html" class="d-flex align-items-center gap-3">
+                    <img src="logo3.webp" alt="Logo TooRead" width="110">
+                </a>
+
+                <div class="border-start bg-body-secondary" style="height: 28px; width: 1px;"></div>
+
+                <span class="fs-4 fw-extrabold text-dark text-uppercase tracking-tight"
+                    style="font-family: system-ui, -apple-system, sans-serif;">
+                    User
+                </span>
+            </div>
+
+            <div class="d-flex align-items-center gap-2">
+                <span id="headerName"
+                    class="bg-body-secondary text-dark rounded-pill px-4 py-2 fw-bold small border text-nowrap">
+                    User
+                </span>
+                <button id="userLogoutBtn" class="btn btn-danger rounded-pill px-3 py-2 fw-semibold small">
+                    Log Out
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid bg-light min-vh-100 p-0 d-flex justify-content-center">
+        <div class="row g-0 w-100 px-3 px-md-4" style="max-width: 1250px; min-height: calc(100vh - 70px);">
+            <aside class="col-12 col-md-3 bg-light p-3 d-flex flex-column align-items-center align-items-md-start"
+                style="max-width: 200px;">
+                <div class="d-flex flex-column align-items-center w-100 mb-3 pt-2">
+                    <div class="bg-secondary bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center mb-2"
+                        style="width: 55px; height: 55px;">
+                        <img src="user.png" alt="Avatar" class="img-fluid rounded-circle" style="max-height: 80%;">
+                    </div>
+
+                    <div id="profileName" class="text-dark small fw-semibold" style="font-size: 0.8rem;">
+                        User
+                    </div>
+                </div>
+
+                <ul class="nav flex-column w-100 gap-1 ps-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center gap-2 ps-1 py-1.5" href="#followingSection"
+                            style="font-size: 0.85rem;">
+                            <img src="following.png" alt="Following Icon"
+                                style="width: 1rem; height: 1rem; object-fit: contain;">
+                            Following
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center gap-2 ps-1 py-1.5" href="#historySection"
+                            style="font-size: 0.85rem;">
+                            <img src="history.png" alt="History Icon"
+                                style="width: 1rem; height: 1rem; object-fit: contain;">
+                            History
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+
+            <main class="col-12 col-md-9 p-3 flex-grow-1">
+                <section id="followingSection" class="bg-white border rounded shadow-sm p-4 mb-4">
+                    <div class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3">
+                        <h1 class="h5 fw-bold mb-0 text-dark">Following</h1>
+                        <span id="followingCount" class="text-muted small fw-semibold">0 series</span>
+                    </div>
+
+                    <div id="userFollowingList" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3"></div>
+                </section>
+
+                <section id="historySection" class="bg-white border rounded shadow-sm p-4">
+                    <div class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3">
+                        <h2 class="h5 fw-bold mb-0 text-dark">Reading History</h2>
+                        <button id="clearHistoryBtn" class="btn btn-sm btn-outline-danger">Clear history</button>
+                    </div>
+
+                    <div id="userHistoryList" class="list-group list-group-flush"></div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="auth.js?v=persist-login-all-20260603"></script>
+    <script src="user.js"></script>
+</body>
+
+</html>

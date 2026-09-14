@@ -1,0 +1,158 @@
+.nav-link {
+    position: relative;
+    transition: 0.2s ease;
+}
+
+/* hover underline đỏ */
+.nav-link:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: #dc3545;
+    /* đỏ bootstrap */
+}
+
+/* cho logo, login, search cũng có hover underline */
+.hover-underline {
+    position: relative;
+}
+
+/* --- ARD TRUYỆN TRANH & NÚT RỜI --- */
+
+/* Khung ảnh tỷ lệ đứng truyện tranh 3:4 */
+.thumbnail-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background-color: #e9ecef;
+    /* Nền xám khi chưa load được ảnh */
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+/* Ảnh hiển thị bao phủ trọn vẹn khung */
+.thumbnail-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    text-indent: -10000px;
+    /* Giấu text alt lỗi */
+}
+
+/* Tag góc trái trên của ảnh */
+.badge-status {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 4px 8px;
+    border-radius: 3px;
+    z-index: 5;
+}
+
+/* Tiêu đề truyện giới hạn tối đa 2 dòng kèm dấu ... */
+.comic-title {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-top: 12px;
+    margin-bottom: 2px;
+    color: #111;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Nút đang được chọn (Active - Màu đen) */
+.active-tab {
+    background-color: #000000 !important;
+    border: none;
+    color: #ffffff !important;
+}
+
+/* Nút thông thường chưa chọn (Màu xám nhạt như trong ảnh mẫu) */
+.btn-custom-light {
+    background-color: #f1f1f1 !important;
+    border: none;
+}
+
+.btn-custom-light:hover {
+    background-color: #e2e2e2 !important;
+}
+
+/* Khung Banner siêu rộng */
+.story-banner {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+        url('banner-purple.jpg') center center / cover no-repeat;
+    background-color: #1a0933;
+}
+
+.tracking-wider {
+    letter-spacing: 1px;
+}
+
+.btn-subscribe {
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.btn-subscribe:hover {
+    background-color: #f1f1f1 !important;
+    transform: scale(1.03);
+}
+
+/* Hiệu ứng nền khi di chuột vào dòng chương */
+.chapter-item {
+    transition: background-color 0.2s ease;
+}
+
+.chapter-item:hover {
+    background-color: #f9f9f9;
+}
+
+/* Kiểu chữ tiêu đề chương */
+.chapter-title {
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+/* ĐỔI MÀU ĐỎ KHI ĐƯA CHUỘT VÀO HÀNG TRUYỆN */
+.chapter-item:hover .chapter-title {
+    color: #dc3545 !important;
+    /* Màu đỏ Bootstrap (Danger Red) */
+}
+
+.text-xs {
+    font-size: 12px;
+}
+
+.btn-first-ep {
+    font-size: 15px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-first-ep:hover {
+    background-color: #222 !important;
+}
+
+.form-control:focus {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25) !important;
+}
+
+.btn-auth-action {
+    transition: transform 0.2s ease;
+}
+
+.btn-auth-action:hover {
+    transform: scale(1.02);
+}

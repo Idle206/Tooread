@@ -1,0 +1,144 @@
+{
+  "users": [
+    {
+      "email": "lamvietngu@gmail.com",
+      "password": "$2a$10$R0O6CbkcaWRDZgtnEX67r.tzidIp3VqNwkR/gCvDpxese3WmRaaiC",
+      "username": "lamvietngu",
+      "role": "admin",
+      "id": 1,
+      "followedStories": [
+        {
+          "id": "stray-cat-owner",
+          "title": "Stray Cat Owner",
+          "author": "Suzukure Koh",
+          "cover": "data4.png",
+          "url": "chapters.html"
+        },
+        {
+          "id": "2",
+          "title": "Laam Viet nguu",
+          "author": "LAm Viet",
+          "cover": "https://hinhanhbuon.edu.vn/wp-content/uploads/2025/11/anh-anime-buon-chat-28.jpg",
+          "url": "chapters.html?id=2"
+        }
+      ]
+    },
+    {
+      "email": "lamvietngu1@gmail.com",
+      "password": "$2a$10$v1b9EAgGUXgKRrmswq9SZuk1r29bRaqx37lEAfnx1iikP9x1euzJO",
+      "username": "dcmlamviet",
+      "role": "user",
+      "id": 2,
+      "followedStories": [
+        {
+          "id": "2",
+          "title": "Laam Viet nguu",
+          "author": "LAm Viet",
+          "cover": "https://hinhanhbuon.edu.vn/wp-content/uploads/2025/11/anh-anime-buon-chat-28.jpg",
+          "url": "chapters.html?id=2"
+        },
+        {
+          "id": "1",
+          "title": "GAMER!",
+          "author": "Sekina Aoi",
+          "cover": "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lhf76smoc1c14a.webp",
+          "url": "chapters.html?id=1"
+        }
+      ],
+      "readingHistory": [
+        {
+          "storyId": "1",
+          "chapterId": "1",
+          "storyTitle": "GAMER!",
+          "volumeTitle": "Tập 36",
+          "chapterTitle": "LAmvietngu",
+          "url": "reader.html?storyId=1&chapterId=1&v=reader-fix-20260603",
+          "readAt": "3/6/2026"
+        }
+      ]
+    },
+    {
+      "email": "lamviet07@gmail.com",
+      "password": "$2a$10$tjLHJSZXA1QKvQQuJPn2.eDkKfdaM4i4z8gq1JZhrZ/jVVP0.EXwi",
+      "username": "lamviet12",
+      "role": "admin",
+      "id": 3,
+      "followedStories": [
+        {
+          "id": "1",
+          "title": "GAMER!",
+          "author": "Sekina Aoi",
+          "cover": "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lhf76smoc1c14a.webp",
+          "url": "chapters.html?id=1"
+        }
+      ],
+      "readingHistory": [
+        {
+          "storyId": "1",
+          "chapterId": "2",
+          "storyTitle": "GAMER!",
+          "volumeTitle": "Tập 35",
+          "chapterTitle": "cccccccc",
+          "url": "reader.html?storyId=1&chapterId=2&v=reader-fix-20260603",
+          "readAt": "3/6/2026"
+        }
+      ]
+    },
+    {
+      "email": "lamviet06@gmail.com",
+      "password": "$2a$10$YGSSMJ9.btreO5kfz6Ba7ek/fYFvW3wMXoM4O.gC/0Vog1rumxugu",
+      "username": "lamviet",
+      "role": "user",
+      "id": 4
+    }
+  ],
+  "stories": [
+    {
+      "title": "GAMER!",
+      "author": "Sekina Aoi",
+      "genre": "Romance",
+      "cover": "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lhf76smoc1c14a.webp",
+      "schedule": "Updating",
+      "description": "",
+      "id": 1
+    },
+    {
+      "title": "Laam Viet nguu",
+      "author": "LAm Viet",
+      "genre": "Sex",
+      "cover": "https://hinhanhbuon.edu.vn/wp-content/uploads/2025/11/anh-anime-buon-chat-28.jpg",
+      "schedule": "Updating",
+      "description": "",
+      "id": 2
+    },
+    {
+      "title": "Xin chào Lâm Việt",
+      "author": "Duy Khánh",
+      "genre": "Action",
+      "cover": "https://sloganhay.com/wp-content/uploads/2026/03/anh-meme-bua-5.jpg",
+      "schedule": "Every Day",
+      "description": "Đéo có gì đâu",
+      "id": 3
+    }
+  ],
+  "chapters": [
+    {
+      "storyId": 1,
+      "volumeTitle": "Tập 36",
+      "chapterTitle": "LAmvietngu",
+      "chapterNumber": 36,
+      "releaseDate": "2026-12-25",
+      "content": "hihihhehehehe",
+      "id": 1
+    },
+    {
+      "storyId": 1,
+      "volumeTitle": "Tập 35",
+      "chapterTitle": "cccccccc",
+      "chapterNumber": 2,
+      "releaseDate": "2026-06-12",
+      "content": "hihihihihihihi",
+      "id": 2
+    }
+  ]
+}

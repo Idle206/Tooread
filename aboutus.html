@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TooRead - Read Light Novel Online</title>
+  <link rel="stylesheet" href="bootstrap-5.2.1-dist/bootstrap-5.2.1-dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="bootstrap-5.2.1-dist/bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+</head>
+
+<body>
+  <!-- Phần header -->
+  <header class="container d-flex justify-content-between align-items-center py-3 fs-5">
+    <!-- LEFT -->
+    <div class="d-flex align-items-center gap-5">
+      <!-- LOGO -->
+      <a href="index.html">
+        <img src="logo.webp" alt="Logo TooRead" width="110" />
+      </a>
+
+      <!-- MENU LEFT -->
+      <nav>
+        <ul class="d-flex gap-4 list-unstyled m-0">
+          <li><a href="#" class="nav-link fw-semibold p-0">About us</a></li>
+
+          <li>
+            <a href="#" class="nav-link fw-semibold p-0">Work with us</a>
+          </li>
+
+          <li><a href="#" class="nav-link fw-semibold p-0">News</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- RIGHT -->
+    <div>
+      <nav>
+        <ul class="d-flex gap-4 list-unstyled m-0 align-items-center">
+          <li>
+            <a href="#" class="nav-link fw-semibold p-0">ORIGINAl</a>
+          </li>
+
+          <li>
+            <a href="#" class="nav-link fw-semibold p-0">TRANSLATED</a>
+          </li>
+
+          <li>
+            <a href="#" class="nav-link fw-semibold p-0">CATEGORIES</a>
+          </li>
+
+          <!-- LOGIN -->
+          <li>
+            <button class="btn btn-outline-danger rounded-pill" data-bs-toggle="modal" data-bs-target="#authModal">
+              Log In
+            </button>
+          </li>
+
+          <!-- SEARCH -->
+          <li>
+            <button class="btn btn-light rounded-circle d-flex align-items-center justify-content-center"
+              style="width: 44px; height: 44px">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50" fill="currentColor">
+                <path
+                  d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z">
+                </path>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="banner position-relative vh-100 overflow-hidden" style="background-color: black;">
+
+    <video autoplay muted loop playsinline class="position-absolute top-0 start-0"
+      style="width: 100vw; height: 100vh; object-fit: fill; z-index: 0;">
+      <source src="backgorund.mp4" type="video/mp4">
+    </video>
+
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-75" style="z-index: 1;"></div>
+
+    <div
+      class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center text-center text-white p-3"
+      style="z-index: 2;">
+      <div style="max-width: 800px;">
+
+        <p class="text-uppercase fw-semibold mb-2" style="font-size: 0.9rem; letter-spacing: 2px; color: #cbd5e1;">
+          OUR VALUES
+        </p>
+
+        <h1 class="text-uppercase fw-black mb-4 lh-1" style="font-size: clamp(2rem, 5vw, 4rem); font-weight: 900;">
+          WITH US:<br>
+          READERS COME FIRST
+        </h1>
+
+        <p class="mx-auto"
+          style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); max-width: 650px; color: #e2e8f0; line-height: 1.6;">
+          Everything we create is made for readers.
+          From captivating light novels to a smooth and immersive reading experience,
+          we strive to deliver unforgettable moments to everyone who loves great stories.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!---giới thiệu-->
+  <section class="culture-section py-5 my-5 bg-white">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <div class="col-12 col-md-6">
+          <div class="ratio ratio-16x9 rounded shadow-sm overflow-hidden">
+            <iframe src="https://www.youtube.com/embed/AhDoJWPT-MM?si=YRFiau6ijZzM2Jp0" title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="intro-content pe-md-4">
+            <h2 class="text-uppercase fw-bold fs-2 mb-3 text-dark">
+              WE ARE TOOREAD
+            </h2>
+
+            <div class="intro-text text-secondary lh-base" style="text-align: justify;">
+              <p class="mb-0">
+                TooRead was created with the goal of bringing readers engaging stories and the most enjoyable and
+                seamless reading experience possible.
+                <br><br> Since its establishment, we have continuously developed our platform and expanded a diverse
+                content
+                library featuring many different genres, serving the global community of light novel and comic readers.
+                <br><br>
+                From lighthearted everyday stories to captivating fantasy worlds, TooRead always aims to build a
+                high-quality reading space where readers can immerse themselves in every story and fully experience each
+                moment of the narrative.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="culture-section py-5 my-5 bg-white">
+    <div class="container">
+
+      <div class="mb-5">
+        <h2 class="fw-bold text-dark mb-3" style="font-size: 2.5rem;">Building a culture of innovation</h2>
+        <p class="text-secondary mb-0">Discover your next career story with us. Come join us on this storytelling
+          journey!</p>
+      </div>
+
+      <div id="cultureCarousel" class="carousel slide carousel-fade" data-bs-ride="false">
+        <div class="carousel-inner shadow rounded overflow-hidden">
+
+          <div class="carousel-item active">
+            <div class="row g-0">
+              <div class="col-12 col-md-6 p-5 d-flex flex-column justify-content-between bg-secondary-subtle"
+                style="min-height: 450px;">
+                <div class="my-auto">
+                  <h3 class="fw-bold text-uppercase text-dark mb-4" style="letter-spacing: 1px;">TOOREAD WAY</h3>
+                  <p class="text-dark lh-lg mb-0" style="text-align: justify; font-size: 0.95rem;">
+                    We are One Team, moving forward towards the same vision. Each of us, from our own positions, is
+                    working to achieve our common goals.
+                  </p>
+                </div>
+
+                <div class="d-flex gap-2 mt-4">
+                  <button
+                    class="btn btn-white border rounded-circle d-flex justify-content-center align-items-center bg-white shadow-sm"
+                    type="button" data-bs-target="#cultureCarousel" data-bs-slide="prev"
+                    style="width: 45px; height: 45px;">
+                    <span class="text-dark fw-bold fs-4" style="line-height: 0; margin-top: -3px;">‹</span>
+                  </button>
+                  <button
+                    class="btn btn-white border rounded-circle d-flex justify-content-center align-items-center bg-white shadow-sm"
+                    type="button" data-bs-target="#cultureCarousel" data-bs-slide="next"
+                    style="width: 45px; height: 45px;">
+                    <span class="text-dark fw-bold fs-4" style="line-height: 0; margin-top: -3px;">›</span>
+                  </button>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 position-relative">
+                <img src="slider-culture-our-vision-1440.png" class="w-100 h-100 object-fit-cover" alt="Culture 1">
+                <div class="position-absolute bottom-0 start-0 w-100 p-3 d-flex gap-2">
+                  <div class="bg-white opacity-100" style="height: 3px; flex: 1;"></div>
+                  <div class="bg-white opacity-25" style="height: 3px; flex: 1;"></div>
+                  <div class="bg-white opacity-25" style="height: 3px; flex: 1;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row g-0">
+              <div class="col-12 col-md-6 p-5 d-flex flex-column justify-content-between bg-secondary-subtle"
+                style="min-height: 450px;">
+                <div class="my-auto">
+                  <h3 class="fw-bold text-uppercase text-dark mb-4" style="letter-spacing: 1px;">Diversity, Equity,
+                    Inclusion, and Belonging</h3>
+                  <p class="text-dark lh-lg mb-0" style="text-align: justify; font-size: 0.95rem;">
+                    We embrace Diversity, Equity, Inclusion, and Belonging (DEIB), fostering a workplace culture where
+                    every voice is valued and respected as we work together.
+                  </p>
+                </div>
+
+                <div class="d-flex gap-2 mt-4">
+                  <button
+                    class="btn btn-white border rounded-circle d-flex justify-content-center align-items-center bg-white shadow-sm"
+                    type="button" data-bs-target="#cultureCarousel" data-bs-slide="prev"
+                    style="width: 45px; height: 45px;">
+                    <span class="text-dark fw-bold fs-4" style="line-height: 0; margin-top: -3px;">‹</span>
+                  </button>
+                  <button
+                    class="btn btn-white border rounded-circle d-flex justify-content-center align-items-center bg-white shadow-sm"
+                    type="button" data-bs-target="#cultureCarousel" data-bs-slide="next"
+                    style="width: 45px; height: 45px;">
+                    <span class="text-dark fw-bold fs-4" style="line-height: 0; margin-top: -3px;">›</span>
+                  </button>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 position-relative">
+                <img src="slider-culture-deib-1440.png" class="w-100 h-100 object-fit-cover" alt="Culture 2">
+                <div class="position-absolute bottom-0 start-0 w-100 p-3 d-flex gap-2">
+                  <div class="bg-white opacity-25" style="height: 3px; flex: 1;"></div>
+                  <div class="bg-white opacity-100" style="height: 3px; flex: 1;"></div>
+                  <div class="bg-white opacity-25" style="height: 3px; flex: 1;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row g-0">
+              <div class="col-12 col-md-6 p-5 d-flex flex-column justify-content-between bg-secondary-subtle"
+                style="min-height: 450px;">
+                <div class="my-auto">
+                  <h3 class="fw-bold text-uppercase text-dark mb-4" style="letter-spacing: 1px;">Benefits</h3>
+                  <p class="text-dark lh-lg mb-0" style="text-align: justify; font-size: 0.95rem;">
+                    We continuously cultivate a culture where you can joyfully immerse yourself and grow together.
+                  </p>
+                </div>
+
+                <div class="d-flex gap-2 mt-4">
+                  <button
+                    class="btn btn-white border rounded-circle d-flex justify-content-center align-items-center bg-white shadow-sm"
+                    type="button" data-bs-target="#cultureCarousel" data-bs-slide="prev"
+                    style="width: 45px; height: 45px;">
+                    <span class="text-dark fw-bold fs-4" style="line-height: 0; margin-top: -3px;">‹</span>
+                  </button>
+                  <button
+                    class="btn btn-white border rounded-circle d-flex justify-content-center align-items-center bg-white shadow-sm"
+                    type="button" data-bs-target="#cultureCarousel" data-bs-slide="next"
+                    style="width: 45px; height: 45px;">
+                    <span class="text-dark fw-bold fs-4" style="line-height: 0; margin-top: -3px;">›</span>
+                  </button>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 position-relative">
+                <img src="slider-culture-benefits-1440.png" class="w-100 h-100 object-fit-cover" alt="Culture 3">
+                <div class="position-absolute bottom-0 start-0 w-100 p-3 d-flex gap-2">
+                  <div class="bg-white opacity-25" style="height: 3px; flex: 1;"></div>
+                  <div class="bg-white opacity-25" style="height: 3px; flex: 1;"></div>
+                  <div class="bg-white opacity-100" style="height: 3px; flex: 1;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!--Phần có mặt toàn cầu-->
+  <section class="subsidiary-section py-5 bg-white text-dark">
+    <div class="container">
+
+      <div class="mb-4 text-start">
+        <h2 class="fw-bold mb-3 text-dark" style="font-size: 2.2rem; font-family: sans-serif; line-height: 1.3;">
+          WE ARE PRESENT AROUND THE WORLD.
+        </h2>
+        <p>Our headquarters is located in the sunny city of Los Angeles, but we serve players through many other offices
+          across the globe. At our international offices, Rioters shape the gaming experience for players in their
+          respective regions.
+
+          We are looking for passionate players who are also leaders in their fields to help us deliver meaningful value
+          to players all around the world.</p>
+      </div>
+
+      <div class="map-wrapper position-relative mx-auto" style="max-width: 1200px;">
+
+        <img src="map.png" class="w-100 h-auto d-block" alt="TooRead Global Map">
+
+      </div>
+
+    </div>
+  </section>
+  </div>
+  </section>
+
+  <!--Phần footer-->
+  <footer class="bg-light text-center py-5 border-top">
+    <div class="container">
+      <div class="d-flex justify-content-center gap-4 mb-4 text-dark fs-4">
+        <a href="https://www.facebook.com/profile.php?id=61590154946234" target="_blank" rel="noopener noreferrer"
+          class="text-dark text-decoration-none"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-dark text-decoration-none"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-dark text-decoration-none"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.youtube.com/channel/UCUM9mIBItZbT-6kkptJIomQ" target="_blank" rel="noopener noreferrer"
+          class="text-dark text-decoration-none">
+          <i class="bi bi-youtube"></i>
+        </a>
+      </div>
+
+      <div class="d-flex flex-wrap justify-content-center align-items-center gap-3 mb-5 small-footer-links">
+        <a href="aboutus.html" class="text-secondary text-decoration-none">About</a>
+        <span class="text-muted divider">|</span>
+        <a href="#" class="text-secondary text-decoration-none">Feedback</a>
+        <span class="text-muted divider">|</span>
+        <a href="#" class="text-secondary text-decoration-none">Help</a>
+        <span class="text-muted divider">|</span>
+        <a href="terms.html" class="text-secondary text-decoration-none">Terms</a>
+        <span class="text-muted divider">|</span>
+        <a href="privacy.html" class="text-secondary text-decoration-none">Privacy</a>
+        <span class="text-muted divider">|</span>
+        <a href="#" class="text-secondary text-decoration-none">Advertise</a>
+        <span class="text-muted divider">|</span>
+        <a href="contact.html" class="text-secondary text-decoration-none">Contact</a>
+
+        <div class="ms-2">
+          <select class="form-select form-select-sm language-dropdown">
+            <option value="en" selected>English</option>
+            <option value="vi">Tiếng Việt</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="footer-brand-section">
+        <div class="mb-2">
+          <img src="logo2.webp" alt="TooRead Logo" class="webtoon-style-logo" style="height: 30px; width: auto" />
+        </div>
+        <p class="text-muted mb-0 copyright-text">ⓒ TooRead Ltd.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="bootstrap-5.2.1-dist/bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="auth.js?v=persist-login-all-20260603"></script>
+</body>
+
+</html>

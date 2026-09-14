@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TooRead - Read Light Novel Online</title>
+    <link rel="stylesheet" href="bootstrap-5.2.1-dist/bootstrap-5.2.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="bootstrap-5.2.1-dist/bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header class="container d-flex justify-content-between align-items-center py-3 fs-5">
+
+        <!-- LEFT -->
+        <div class="d-flex align-items-center gap-5">
+
+            <!-- LOGO -->
+            <a href="index.html">
+                <img src="logo.webp" alt="Logo TooRead" width="110">
+            </a>
+
+            <!-- MENU LEFT -->
+            <nav>
+                <ul class="d-flex gap-4 list-unstyled m-0">
+
+                    <li><a href="aboutus.html" class="nav-link fw-semibold p-0">About us</a></li>
+
+                    <li><a href="#" class="nav-link fw-semibold p-0">Work with us</a></li>
+
+                    <li><a href="#" class="nav-link fw-semibold p-0">News</a></li>
+
+                </ul>
+            </nav>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div>
+            <nav>
+                <ul class="d-flex gap-4 list-unstyled m-0 align-items-center">
+
+                    <li>
+                        <a href="#" class="nav-link fw-semibold p-0">ORIGINAl</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-link fw-semibold p-0">TRANSLATED</a>
+                    </li>
+
+                    <li>
+                        <a href="categories.html" class="nav-link fw-semibold p-0">CATEGORIES</a>
+                    </li>
+
+                    <!-- LOGIN -->
+                    <li>
+                        <!-- Chưa đăng nhập -->
+                      <div id="authHeaderContainer">
+    <button id="loginBtn" class="btn btn-outline-danger rounded-pill d-none" data-bs-toggle="modal" data-bs-target="#authModal">
+        Log In
+    </button>
+
+    <div id="userMenu" class="d-none">
+        <span id="displayUsername" class="ms-2 fw-bold"></span>
+        <a href="dashboardadmin1.html" id="dashboardLink" class="btn btn-outline-primary rounded-pill ms-2 d-none">Dashboard</a>
+        <button id="logoutBtn" class="btn btn-danger rounded-pill ms-2">Log Out</button>
+    </div>
+</div>
+
+                        <!-- SEARCH -->
+                    <li>
+                        <button class="btn btn-light rounded-circle d-flex align-items-center justify-content-center"
+                            style="width: 44px; height: 44px;"onclick="window.location.href='user.html'">
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50"
+                                fill="currentColor">
+                                <path
+                                    d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z">
+                                </path>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header
+        class="container d-flex justify-content-between align-items-center py-3 pb-2 border-bottom border-secondary-subtle">
+    </header>
+
+    <section id="followedStoriesSection" class="container py-4 d-none">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="h4 fw-bold mb-0 text-dark">Following</h2>
+        </div>
+        <div id="followedStoriesList" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3"></div>
+    </section>
+
+    <!--Trending and popular-->
+
+    <section class="trending-section container py-4">
+        <div class="mb-4">
+            <div class="mb-3">
+                <h2 class="h4 fw-bold mb-0 text-dark">Trending & Popular Series</h2>
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3">
+
+            <div class="col">
+                <article class="series-item h-100">
+                    <div class="thumbnail-box">
+                        <span class="badge-status bg-success">New Series</span>
+                        <img src="datatest.jpg" alt="Life of a Demon Hunter">
+                    </div>
+                    <div class="info-box">
+                        <h3 class="comic-title">The Beautiful Girl I Accidentally Helped Who Has Somehow Become Attached
+                            To Me.</h3>
+                        <p class="comic-genre text-muted small mb-0">Romance</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col">
+                <article class="series-item h-100">
+
+                    <a href="chapters.html">
+                        <div class="thumbnail-box">
+                            <span class="badge-status bg-success">New Episode</span>
+                            <img src="datatest2.jpg" alt="Blood System">
+                        </div>
+                    </a>
+
+                    <div class="info-box">
+                        <h3 class="comic-title">
+                            <a href="chapters.html" class="text-decoration-none text-dark hover-title">Stray Cat
+                                Owner</a>
+                        </h3>
+                        <p class="comic-genre text-muted small mb-0">Romance</p>
+                    </div>
+
+                </article>
+            </div>
+
+            <div class="col">
+                <article class="series-item h-100">
+                    <div class="thumbnail-box">
+                        <span class="badge-status bg-success">New Episode</span>
+                        <img src="datatest3_.jpg" alt="Live Happily Ever After With My Ex's Uncle">
+                    </div>
+                    <div class="info-box">
+                        <h3 class="comic-title">I Was Cheated On and Falsely Accused, but Now the Most Beautiful Girl in
+                            the School Is Getting Close to Me</h3>
+                        <p class="comic-genre text-muted small mb-0">Romance</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col">
+                <article class="series-item h-100">
+                    <div class="thumbnail-box">
+                        <span class="badge-status bg-success">New Episode</span>
+                        <img src="not-so-silent.jpg" alt="Four Options">
+                    </div>
+                    <div class="info-box">
+                        <h3 class="comic-title">Four Options</h3>
+                        <p class="comic-genre text-muted small mb-0">Romance</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col">
+                <article class="series-item h-100">
+                    <div class="thumbnail-box">
+                        <span class="badge-status bg-success">New Episode</span>
+                        <img src="bad-born-blood.jpg" alt="The Gwichon Village Mystery">
+                    </div>
+                    <div class="info-box">
+                        <h3 class="comic-title">The Gwichon Village Mystery</h3>
+                        <p class="comic-genre text-muted small mb-0">Thriller</p>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </section>
+
+    <!--coming soon-->
+    <section class="comingsoon-section container py-4">
+        <div class="mb-4">
+            <div class="mb-3">
+                <h2 class="h4 fw-bold mb-0 text-dark">Coming Soon</h2>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+                <div></div> <a href="#" class="text-decoration-none text-secondary small fw-semibold">View all &gt;</a>
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3">
+
+            <div class="col">
+                <article class="series-item h-100">
+                    <div class="thumbnail-box">
+                        <img src="overwatch.jpg" alt="Overwatch: Undivided">
+                    </div>
+                    <div class="info-box">
+                        <h3 class="comic-title">Overwatch: Undivided</h3>
+                        <p class="comic-genre text-muted small mb-0">Action</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col">
+                <article class="series-item h-100">
+                    <div class="thumbnail-box">
+                        <img src="dungeon-crawler.jpg" alt="Dungeon Crawler Carl">
+                    </div>
+                    <div class="info-box">
+                        <h3 class="comic-title">Dungeon Crawler Carl</h3>
+                        <p class="comic-genre text-muted small mb-0">Fantasy</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col">
+                <article class="series-item h-100">
+                    <div class="thumbnail-box">
+                        <img src="marriage.jpg" alt="Marriage of Convenience">
+                    </div>
+                    <div class="info-box">
+                        <h3 class="comic-title">Marriage of Convenience</h3>
+                        <p class="comic-genre text-muted small mb-0">Romance</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col">
+                <article class="series-item h-100">
+                    <div class="thumbnail-box">
+                        <img src="not-so-silent.jpg" alt="Not So Silent">
+                    </div>
+                    <div class="info-box">
+                        <h3 class="comic-title">Not So Silent</h3>
+                        <p class="comic-genre text-muted small mb-0">Romance</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col">
+                <article class="series-item h-100">
+                    <div class="thumbnail-box">
+                        <img src="bad-born-blood.jpg" alt="Bad Born Blood">
+                    </div>
+                    <div class="info-box">
+                        <h3 class="comic-title">Bad Born Blood</h3>
+                        <p class="comic-genre text-muted small mb-0">Action</p>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </section>
+
+    <!--truyen sang tac moi nhat-->
+    <section class="Originals-section container py-4">
+        <div class="mb-4">
+            <div class="mb-3">
+                <h2 class="h4 fw-bold mb-0 text-dark">Originals Series</h2>
+            </div>
+
+            <div class="d-flex">
+                <a href="#" class="text-decoration-none text-secondary small fw-semibold ms-auto">View all &gt;</a>
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3">
+
+            <div class="col">
+                <article class="series-item h-100">
+                    <div class="thumbnail-box">
+                        <img src="overwatch.jpg" alt="Overwatch: Undivided">
+                    </div>
+                    <div class="info-box">
+                        <h3 class="comic-title">Overwatch: Undivided</h3>
+                        <p class="comic-genre text-muted small mb-0">Action</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col">
+                <article class="series-item h-100">
+                    <div class="thumbnail-box">
+                        <img src="dungeon-crawler.jpg" alt="Dungeon Crawler Carl">
+                    </div>
+                    <div class="info-box">
+                        <h3 class="comic-title">Dungeon Crawler Carl</h3>
+                        <p class="comic-genre text-muted small mb-0">Fantasy</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col">
+                <article class="series-item h-100">
+                    <div class="thumbnail-box">
+                        <img src="marriage.jpg" alt="Marriage of Convenience">
+                    </div>
+                    <div class="info-box">
+                        <h3 class="comic-title">Marriage of Convenience</h3>
+                        <p class="comic-genre text-muted small mb-0">Romance</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col">
+                <article class="series-item h-100">
+                    <div class="thumbnail-box">
+                        <img src="not-so-silent.jpg" alt="Not So Silent">
+                    </div>
+                    <div class="info-box">
+                        <h3 class="comic-title">Not So Silent</h3>
+                        <p class="comic-genre text-muted small mb-0">Romance</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col">
+                <article class="series-item h-100">
+                    <div class="thumbnail-box">
+                        <img src="bad-born-blood.jpg" alt="Bad Born Blood">
+                    </div>
+                    <div class="info-box">
+                        <h3 class="comic-title">Bad Born Blood</h3>
+                        <p class="comic-genre text-muted small mb-0">Action</p>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- truyen dich moi nhat-->
+    <section class="Translated-section container py-4">
+        <div class="mb-4">
+            <div class="mb-3">
+                <h2 class="h4 fw-bold mb-0 text-dark">Translated Series</h2>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+        </div>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3">
+
+            <div class="col">
+                <article class="series-item h-100">
+                    <div class="thumbnail-box">
+                        <img src="overwatch.jpg" alt="Overwatch: Undivided">
+                    </div>
+                    <div class="info-box">
+                        <h3 class="comic-title">Overwatch: Undivided</h3>
+                        <p class="comic-genre text-muted small mb-0">Action</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col">
+                <article class="series-item h-100">
+                    <div class="thumbnail-box">
+                        <img src="dungeon-crawler.jpg" alt="Dungeon Crawler Carl">
+                    </div>
+                    <div class="info-box">
+                        <h3 class="comic-title">Dungeon Crawler Carl</h3>
+                        <p class="comic-genre text-muted small mb-0">Fantasy</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col">
+                <article class="series-item h-100">
+                    <div class="thumbnail-box">
+                        <img src="marriage.jpg" alt="Marriage of Convenience">
+                    </div>
+                    <div class="info-box">
+                        <h3 class="comic-title">Marriage of Convenience</h3>
+                        <p class="comic-genre text-muted small mb-0">Romance</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col">
+                <article class="series-item h-100">
+                    <div class="thumbnail-box">
+                        <img src="not-so-silent.jpg" alt="Not So Silent">
+                    </div>
+                    <div class="info-box">
+                        <h3 class="comic-title">Not So Silent</h3>
+                        <p class="comic-genre text-muted small mb-0">Romance</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col">
+                <article class="series-item h-100">
+                    <div class="thumbnail-box">
+                        <img src="bad-born-blood.jpg" alt="Bad Born Blood">
+                    </div>
+                    <div class="info-box">
+                        <h3 class="comic-title">Bad Born Blood</h3>
+                        <p class="comic-genre text-muted small mb-0">Action</p>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </section>
+
+    <!--Phần footer-->
+    <footer class="bg-light text-center py-5 border-top">
+        <div class="container">
+            <div class="d-flex justify-content-center gap-4 mb-4 text-dark fs-4">
+                <a href="https://www.facebook.com/profile.php?id=61590154946234" target="_blank"
+                    rel="noopener noreferrer" class="text-dark text-decoration-none"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-dark text-decoration-none"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-dark text-decoration-none"><i class="bi bi-twitter-x"></i></a>
+                <a href="https://www.youtube.com/channel/UCUM9mIBItZbT-6kkptJIomQ" target="_blank"
+                    rel="noopener noreferrer" class="text-dark text-decoration-none">
+                    <i class="bi bi-youtube"></i>
+                </a>
+            </div>
+
+            <div class="d-flex flex-wrap justify-content-center align-items-center gap-3 mb-5 small-footer-links">
+                <a href="aboutus.html" class="text-secondary text-decoration-none">About</a>
+                <span class="text-muted divider">|</span>
+                <a href="#" class="text-secondary text-decoration-none">Feedback</a>
+                <span class="text-muted divider">|</span>
+                <a href="#" class="text-secondary text-decoration-none">Help</a>
+                <span class="text-muted divider">|</span>
+                <a href="terms.html" class="text-secondary text-decoration-none">Terms</a>
+                <span class="text-muted divider">|</span>
+                <a href="privacy.html" class="text-secondary text-decoration-none">Privacy</a>
+                <span class="text-muted divider">|</span>
+                <a href="#" class="text-secondary text-decoration-none">Advertise</a>
+                <span class="text-muted divider">|</span>
+                <a href="contact.html" class="text-secondary text-decoration-none">Contact</a>
+
+                <div class="ms-2">
+                    <select class="form-select form-select-sm language-dropdown">
+                        <option value="en" selected>English</option>
+                        <option value="vi">Tiếng Việt</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="footer-brand-section">
+                <div class="mb-2">
+                    <img src="logo2.webp" alt="TooRead Logo" class="webtoon-style-logo"
+                        style="height: 30px; width: auto" />
+                </div>
+                <p class="text-muted mb-0 copyright-text">ⓒ TooRead Ltd.</p>
+            </div>
+        </div>
+    </footer>
+
+    </footer>
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 400px;">
+            <div class="modal-content border-0 shadow-lg" style="border-radius: 16px; overflow: hidden;">
+
+                <div class="modal-header border-0 pb-0 justify-content-end">
+                    <button type="button" class="btn-close m-2" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body px-4 pb-4 pt-0">
+                    <div class="text-center mb-4">
+                        <img src="logo2.webp" alt="TooRead Logo"
+                            style="height: 28px; width: auto; object-fit: contain;">
+                    </div>
+
+                    <!--login -->
+                    <div id="loginSection">
+                        <div class="text-center mb-4">
+                            <h4 class="fw-bold text-dark mb-1">Log in to TooRead</h4>
+                            <p class="text-secondary small">Log in now and enjoy your light novel</p>
+                        </div>
+
+                        <form id="modalLoginForm">
+                            <div class="mb-3">
+                                <label class="form-label small fw-semibold text-secondary">Email address</label>
+                                <input type="email" id="modalLoginEmail" class="form-control rounded-3 py-2"
+                                    placeholder="name@example.com" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label small fw-semibold text-secondary">Password</label>
+                                <input type="password" id="modalLoginPassword" class="form-control rounded-3 py-2"
+                                    placeholder="••••••••" required>
+                            </div>
+                            <button type="submit"
+                                class="btn btn-dark w-100 rounded-pill py-2 fw-semibold mb-3 btn-auth-action">Sign
+                                In</button>
+                        </form>
+
+                        <div class="text-center mt-2">
+                            <p class="small text-secondary mb-0">Don't have an account yet?<a href="#"
+                                    id="linkToRegister" class="text-danger text-decoration-none fw-bold">Register
+                                    now!</a></p>
+                        </div>
+                    </div>
+
+                    <div id="registerSection" class="d-none">
+                        <div class="text-center mb-4">
+                            <h4 class="fw-bold text-dark mb-1">Create Account</h4>
+                            <p class="text-secondary small">Start reading thousands of free comics with other fans and
+                                creators!</p>
+                        </div>
+
+                        <form id="modalRegisterForm">
+                            <div class="mb-3">
+                                <label class="form-label small fw-semibold text-secondary">Username</label>
+                                <input type="text" id="modalRegName" class="form-control rounded-3 py-2"
+                                    placeholder="Nguyễn Văn A" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-semibold text-secondary">Email address</label>
+                                <input type="email" id="modalRegEmail" class="form-control rounded-3 py-2"
+                                    placeholder="name@example.com" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label small fw-semibold text-secondary">Password</label>
+                                <input type="password" id="modalRegPassword" class="form-control rounded-3 py-2"
+                                    placeholder="Tối thiểu 6 ký tự" minlength="6" required>
+                            </div>
+                            <button type="submit"
+                                class="btn btn-dark w-100 rounded-pill py-2 fw-semibold mb-3 btn-auth-action">Sign
+                                Up</button>
+                        </form>
+
+                        <div class="text-center mt-2">
+                            <p class="small text-secondary mb-0">Already have an account?<a href="#" id="linkToLogin"
+                                    class="text-danger text-decoration-none fw-bold">Log in</a></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="bootstrap-5.2.1-dist/bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="auth.js?v=persist-login-all-20260603"></script>
+    <script src="stories.js?v=random-sections-20260603"></script>
+</body>
+
+</html>

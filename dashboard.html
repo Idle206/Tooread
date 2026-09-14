@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASHBOARD</title>
+    <link rel="stylesheet" href="bootstrap-5.2.1-dist/bootstrap-5.2.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header class="navbar navbar-expand bg-white border-bottom align-items-center w-100 px-5" style="height: 70px;">
+        <div class="container-fluid d-flex align-items-center justify-content-between p-0">
+
+            <div class="d-flex align-items-center gap-2">
+                <a href="index.html" class="d-flex align-items-center gap-3">
+                    <img src="logo3.webp" alt="Logo TooRead" width="110">
+                </a>
+
+                <div class="border-start bg-body-secondary" style="height: 28px; width: 1px;"></div>
+
+                <span class="fs-4 fw-extrabold text-dark text-uppercase tracking-tight"
+                    style="font-family: system-ui, -apple-system, sans-serif;">
+                    Dashboard
+                </span>
+            </div>
+
+            <div class="d-flex align-items-center">
+                <span class="bg-body-secondary text-dark rounded-pill px-4 py-2 fw-bold small border text-nowrap">
+                    vịt việt
+                </span>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="container py-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h1 class="h4 fw-bold mb-1">Account Management</h1>
+                <p class="text-secondary mb-0">Admin can add, edit roles, and delete registered accounts.</p>
+            </div>
+            <a href="dashboardadmin1.html" class="btn btn-outline-dark rounded-pill px-4">Back to site</a>
+        </div>
+
+        <section class="border rounded-3 p-4 mb-4 bg-white">
+            <h2 class="h6 fw-bold mb-3">Add account</h2>
+            <form id="adminCreateUserForm" class="row g-3">
+                <div class="col-md-3">
+                    <label class="form-label small fw-semibold text-secondary">Username</label>
+                    <input type="text" id="adminUsername" class="form-control" required>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label small fw-semibold text-secondary">Email</label>
+                    <input type="email" id="adminEmail" class="form-control" required>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label small fw-semibold text-secondary">Password</label>
+                    <input type="password" id="adminPassword" class="form-control" minlength="6" required>
+                </div>
+                <div class="col-md-2">
+                    <label class="form-label small fw-semibold text-secondary">Role</label>
+                    <select id="adminRole" class="form-select">
+                        <option value="user">Client</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+                <div class="col-md-1 d-flex align-items-end">
+                    <button type="submit" class="btn btn-dark w-100">Add</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="border rounded-3 p-4 bg-white">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="h6 fw-bold mb-0">Accounts</h2>
+                <button type="button" id="refreshUsersBtn" class="btn btn-sm btn-outline-secondary">Refresh</button>
+            </div>
+            <div class="table-responsive">
+                <table class="table align-middle mb-0">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Email</th>
+                            <th>Username</th>
+                            <th>Role</th>
+                            <th class="text-end">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usersTableBody">
+                        <tr>
+                            <td colspan="5" class="text-secondary">Loading...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!--footer-->
+    <footer class="bg-light text-center py-5 border-top">
+        <div class="container">
+
+            <div class="d-flex justify-content-center gap-4 mb-4 text-dark fs-4">
+                <a href="https://www.facebook.com/profile.php?id=61590154946234" target="_blank"
+                    rel="noopener noreferrer" class="text-dark text-decoration-none"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-dark text-decoration-none"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-dark text-decoration-none"><i class="bi bi-twitter-x"></i></a>
+                <a href="https://www.youtube.com/channel/UCUM9mIBItZbT-6kkptJIomQ" target="_blank"
+                    rel="noopener noreferrer" class="text-dark text-decoration-none">
+                    <i class="bi bi-youtube"></i>
+                </a>
+            </div>
+
+            <div class="d-flex flex-wrap justify-content-center align-items-center gap-3 mb-5 small-footer-links">
+                <a href="#" class="text-secondary text-decoration-none">About</a>
+                <span class="text-muted divider">|</span>
+                <a href="#" class="text-secondary text-decoration-none">Feedback</a>
+                <span class="text-muted divider">|</span>
+                <a href="#" class="text-secondary text-decoration-none">Help</a>
+                <span class="text-muted divider">|</span>
+                <a href="#" class="text-secondary text-decoration-none">Terms</a>
+                <span class="text-muted divider">|</span>
+                <a href="#" class="text-secondary text-decoration-none">Privacy</a>
+                <span class="text-muted divider">|</span>
+                <a href="#" class="text-secondary text-decoration-none">Advertise</a>
+                <span class="text-muted divider">|</span>
+                <a href="#" class="text-secondary text-decoration-none">Contact</a>
+
+                <div class="ms-2">
+                    <select class="form-select form-select-sm language-dropdown">
+                        <option value="en" selected>English</option>
+                        <option value="vi">Tiếng Việt</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="footer-brand-section">
+                <div class="mb-2">
+                    <img src="logo2.webp" alt="TooRead Logo" class="webtoon-style-logo"
+                        style="height: 30px; width: auto;">
+                </div>
+                <p class="text-muted mb-0 copyright-text">ⓒ TooRead Ltd.</p>
+            </div>
+
+        </div>
+    </footer>
+    <script src="auth.js?v=persist-login-all-20260603"></script>
+</body>
+
+</html>
