@@ -4,7 +4,7 @@
 
 The UI and overall concept were heavily inspired by existing web novel platforms, particularly **Webtoon**. Because reinventing the wheel seemed unnecessarily difficult, we decided to observe an existing wheel and make our own slightly questionable version of it.
 <p align="center">
-  <img src="./images/homepage.png" width="800">
+  <img src="./af571d98-028f-4a8b-ab87-71d4bcac1284.png" width="800">
 </p>
 
 ### 🛠️ Technology
